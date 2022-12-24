@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            padding-top: 200px;
+            justify-content: center;
+         }
+
+        .parent_container {
+            height: 200px;
+            background: rgb(169, 65, 39);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35%;
+            height: 400px;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .container {
+            background: rgb(207, 198, 21);
+            height: 120px;
+            width: 70px;
+            border-radius: 100% 100% 100% 100% / 20% 20% 20% 20% ;
+            /* z-index: 1; */
+        }
+
+        .first  {
+            position: relative ;
+            width: 25px;
+            border-radius: 0% 100% 100% 0% / 0% 10% 10% 0% ;
+        }
+        .last  {
+            width: 25px;
+            border-radius: 100% 0% 0% 100% / 10% 0% 0% 10% ;
+        }
+
+        .moon-1 {
+            width: 55px;
+            height: 55px;
+            border-radius: 48%;
+            background: rgb(131, 130, 124, 0);
+            position: relative;
+            top: 40px;
+            left: 20px;
+            box-shadow: -27px -7px 0 0  rgb(169, 65, 39);
+        }
+        .moon-2 {
+            width: 55px;
+            height: 55px;
+            border-radius: 49%;
+            background: rgb(131, 130, 124, 0);
+            position: relative;
+            top: 15px;
+            right: 30px;
+            box-shadow: 30px 15px 0 0  rgb(169, 65, 39);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent_container">
+        <div class="container first"></div>
+        <div class="container ">
+            <div class="moon-1"></div>
+        </div>
+        <div class="container "></div>
+        <div class="container "></div>
+        <div class="container "></div>
+        <div class="container "></div>
+        <div class="container "></div>
+        <div class="container "></div>
+        <div class="container ">
+            <div class="moon-2"></div>
+        </div>
+        <div class="container last"></div>
+    </div>
+</body>
+</html>
